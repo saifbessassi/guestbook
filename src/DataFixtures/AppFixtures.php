@@ -31,12 +31,20 @@ class AppFixtures extends Fixture
         $paris->setIsInternational(true);
         $manager->persist($paris);
 
-        $comment = new Comment();
-        $comment->setConference($paris);
-        $comment->setAuthor('xxx');
-        $comment->setEmail('xxx@mail.com');
-        $comment->setText('This is an example comment');
-        $manager->persist($comment);
+        $comment1 = new Comment();
+        $comment1->setConference($paris);
+        $comment1->setAuthor('xxx');
+        $comment1->setEmail('xxx@mail.com');
+        $comment1->setText('This is an example comment');
+        $comment1->setState('published');
+        $manager->persist($comment1);
+
+        $comment2 = new Comment();
+        $comment2->setConference($tunis);
+        $comment2->setAuthor('xxx');
+        $comment2->setEmail('xxx@mail.com');
+        $comment2->setText('This is an example comment');
+        $manager->persist($comment2);
 
         $admin = new Admin();
         $admin->setRoles(['ROLE_ADMIN']);
