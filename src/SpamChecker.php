@@ -6,7 +6,7 @@ use App\Entity\Comment;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-class SpamCheker {
+class SpamChecker {
     private $endpoint;
 
     public function __construct(
